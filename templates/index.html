@@ -1,0 +1,252 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> med elixir </title>
+            <link rel="stylesheet" type="text/css" href="{% static 'css/index.css' %}">
+
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+
+        </head>
+
+        
+    <body>
+        
+        <!-----------...........firstnavbar...........------------->
+
+        <div class="bgimg" style=' background-image: url("static/images/image5.jpg");  background-size: 100% 100%;  background-attachment:fixed;  width:98%;
+        height:703px; '>
+
+            <nav class="navbar fixed-top navbar-expand-md bg-dark navbar-dark">
+
+                <div class="container">
+                    <a href="{% url 'index' %}" class="navbar-brand text-info font-weight-bold">
+                        MED Elixir
+                    </a>
+
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsenavbar">
+                        <span class="navbar-toggler-icon"> </span>
+                    </button>
+
+                    <div class="collapse navbar-collapse" text-center id="collapsenavbar">
+
+                        <ul class="navbar-nav ml-auto">
+                            <li class="nav-item">
+                                <a href="{% url 'signup' %}" class="nav-link text-white"> Sign Up </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="{% url 'login' %}" class="nav-link text-white"> Log In </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="" class="nav-link"> <i class="fas fa-user-circle fa-2x"></i> </a>
+                            </li>
+                            
+                        </ul>
+                            
+                    </div>
+                </div>
+            </nav>
+
+
+        
+            <!-------------.............center..text.......--------------->
+           
+            <div class="container hearderset" id="sectionname">
+               
+                <h2 class="text-center text-info"> one solution to all your medical worries </h2>
+                <h1 class="text-center text-info"> REGISTER NOW! </h1>
+                    <div class="text-center"> 
+                        <input type="button" class="btn btn-warning text-white btn-lg md-2" value="REGISTER">
+                    </div>
+                
+
+            </div>
+        </div>
+
+        <!---------.........secondnavbar............---------->
+        
+        <nav class="navbar fixed-top navbar-expand-md bg-secondary navbar-dark" id="main-bar">
+            <div class="container">
+
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsenavbar">
+                    <span>  <i class="fa fa-ellipsis-h text-dark" aria-hidden="true"></i> </span>
+                </button>
+
+                <div class="collapse navbar-collapse" text-center id="collapsenavbar">
+
+                    <ul class="navbar-nav nav-pills mr-auto">
+                        <li class="nav-item">
+                            <a href="#sectionname" class="nav-link "> Home </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#service" class="nav-link"> service </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#anthology" class="nav-link"> Anthology </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#acess" class="nav-link"> Acess </a>
+                        </li>
+                      <!--  <li class="nav-item">
+                            <a href="" class="nav-link"> Store </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="" class="nav-link"> About Us </a>
+                        </li>-->
+                    </ul>
+
+                    {% for message in messages %}
+                  
+                   <button class="btn btn-primary">{{message}}</button>
+                   {% endfor %}
+
+                </div>
+            </div>
+           
+        </nav>
+       
+        <!-------..........login..........-------->
+
+        
+          
+        <!--....................services...................-->
+
+        <secton class="container ourservices text-center" id="service">
+<div class="bg-info">
+            <h1> OUR SERVICES </h1>
+            <h4> just a click away </h4>
+
+            <div class="row rowsetting">
+                <div class="col-lg-3 col-md-6 col-sm-12 col-12 d-block m-auto">
+                    <div class="imgsetting d-block m-auto">
+                        <i class="fa fa-user-md fa-4x" aria-hidden="true"> </i>
+                    </div>
+
+                    <h2> Medical Practitonar</h2>
+                    <p class="text-light"> No more worring about which doctor is available nearest to you at midnight. Now its supereasy to contact with them. We have all the best doctors on one platform. </p>
+                </div>
+
+                <div class="col-lg-3 col-md-6 col-sm-12 col-12 d-block m-auto">
+                    <div class="imgsetting d-block m-auto">
+                        <i class="fas fa-hospital-symbol fa-4x"></i>
+                    </div>
+
+                    <h2> Hospitals</h2>
+                    <p class="text-light"> Now book your appointments directly. No more standing in long queue. As well as knowing your time is precious, search for the nearest clinic of your doctor and avoid dally. </p>
+                </div>
+
+                <div class="col-lg-3 col-md-6 col-sm-12 col-12 d-block m-auto">
+                    <div class="imgsetting d-block m-auto">
+                        <i class="fas fa-file-powerpoint fa-4x"></i>
+                    </div>
+
+                    <h2> Govt. Schemes </h2>
+                    <p class="text-light">  There is a lot government is doing for citizens health. Get all the information about the related Schemes and policies and make the most out of it. </p>
+                </div>
+
+                <div class="col-lg-3 col-md-6 col-sm-12 col-12 d-block m-auto">
+                    <div class="imgsetting d-block m-auto">
+                        <i class="fas fa-store  fa-4x "></i>
+                    </div>
+
+                    <h2> Medical Store</h2>
+                    <p class="text-light"> Your medicines are over and it’s midnight? No worries, now know all the conclusive timings of  nearest stores and get the meds easily.</p>
+                </div>
+            </div>
+        </secton>
+
+        <!--....................anthology................-->
+
+        <section class="anthology bg-light" id="anthology">
+            <div class="container text-center">
+                <h1> ANTHOLOGY </h1>
+                <p> these episodes might need your attention! </p>
+
+            <div class="row">
+                {% for anthology in anthologies %}
+                <div class="col-lg-4 col-md-4 col-sm-6 col-12 d-block m-auto">
+                    <div class="card bg-info text-light">
+                        <img src="{{anthology.logo.url}}" class="card.img img.fluid rounded-circle" height="200" width="250">
+                        <div class="card-body">
+                            <h2> <a href="" > {{anthology.anthology_name}} </a> </h2>
+                            <p class="card.text"> yojna </p>
+                        </div>
+                    </div>
+                </div>
+               
+                {% endfor %}
+            </div>
+            </div>
+        </div>
+        </section>
+
+        <!---------..........acess..............-------->
+
+        <section class="ourteam bg-info" id="acess">
+            <div classs="container text-center">
+                <h1 class="text-light"> Quick Access </h1>
+                <p class="text-light"> on these facilities </p>
+
+                <div class="row teamsetting ">
+                    <div class="col-lg-4 col-md-4 col-sm-10 c0l-12 d-block m-auto">
+                        <figure class="figure">
+                            <a href=""> <img src="{% static 'images/image8.jpg' %}" class="figure-img img-fluid rounded-circle" heigth="200px" width="200px"> </a>
+                            <figcaption>
+                                <p class="figure-caption"> nearest government hospitals</p>
+                            </figcaption>
+
+                        </figure>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-10 c0l-12 d-block m-auto">
+                        <figure class="figure">
+                            <a href=""> <img src="{% static 'images/image6.png' %}" class="figure-img img-fluid rounded-circle" heigth="200px" width="200px"> </a>
+                            <figcaption>
+                                <p class="figure-caption"> get connected with doctors </p>
+                            </figcaption>
+
+                        </figure>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-10 c0l-12 d-block m-auto">
+                        <figure class="figure">
+                            <a href=""> <img src="{% static 'images/image7.jpg' %}" class="figure-img img-fluid rounded-circle" heigth="200px" width="200px"> </a>
+                            <figcaption>
+                                <p class="figure-caption"> medical stores on map</p>
+                            </figcaption>
+
+                        </figure>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--------........footer.....--------->
+
+        <footer class="footer bg-dark">
+            <h6 class="text-center text-light"> Copyright @ 2021, Team - The Seekers </h6>
+            <p class="text-light"> <i class="fa fa-phone" aria-hidden="true"> </i> Contact Us : +1234567890 </p>
+        </footer>
+
+
+            
+           
+        
+       
+    
+    </body>
+</html>

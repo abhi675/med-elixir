@@ -1,0 +1,139 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> med elixir </title>
+            <link rel="stylesheet" type="text/css" href="{% static 'css/login.css' %}">
+
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+
+        </head>
+
+        
+    <body>
+        
+        <!-----------...........firstnavbar...........------------->
+
+        <div class="bgimg">
+
+            <nav class="navbar fixed-top navbar-expand-md bg-dark navbar-dark">
+
+                <div class="container">
+                    <a href='{% url "index" %}' class="navbar-brand text-info font-weight-bold">
+                        MED Elixir
+                    </a>
+
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsenavbar">
+                        <span class="navbar-toggler-icon"> </span>
+                    </button>
+
+                    <div class="collapse navbar-collapse" text-center id="collapsenavbar">
+
+                        <ul class="navbar-nav nav-pills ml-auto">
+                            <li class="nav-item">
+                                <a href="{% url 'signup' %}" class="nav-link text-white ml-2 mr-2"> Sign Up </a>
+                            </li>
+                            
+                            <li class="nav-item">
+                                <a href="{% url 'login' %}" class="nav-link active bg-secondary text-white ml-2 mr-2"> Log In </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="" class="nav-link"> <i class="fas fa-user-circle fa-2x ml-2 mr-2"></i> </a>
+                            </li>
+                            
+                        </ul>
+                            
+                    </div>
+                </div>
+            </nav>
+        
+
+            
+        </div>
+
+
+<!------..............login...........-------->
+
+<div class="container-sm">
+   
+    <div class="mycard">
+        {% for message in messages %}
+        <div class="alert alert-primary d-flex align-items-center" role="alert">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-exclamation-triangle-fill flex-shrink-0 me-2" viewBox="0 0 16 16" role="img" aria-label="Warning:">
+              <path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+            </svg>
+            <div>
+              {{message}}
+            </div>
+          </div>
+        {% endfor %}
+        <div class="row">
+            <div class="col-md-6">
+                <div class="myleftctn">
+
+                    <form action='' method='post' class="myform text-center">
+                        {% csrf_token %}
+                        <header class="text-warning"> Sign In to your account </header>
+                        <div class="form-group">
+                            <i class="fas fa-user "></i>
+                            <input class="myinput" type="text" placeholder="Name" name="name" id="username" required>
+                            <div class="invalid-feedback"> Please fill out this field. </div>
+                        </div>
+
+                        <div class="form-group">
+                            <i class="fa fa-envelope" aria-hidden="true"></i>
+                            <input class="myinput" placeholder="Email" type="text" name="email" id="email" required>
+                            <div class="invalid-feedback"> Please filll out this field. </div>
+                        </div>
+
+                        <div class="form-group">
+                            <i class="fa fa-lock" aria-hidden="true"></i>
+                            <input class="myinput" placeholder="Password" type="password" name="password" id="password" required>
+                            <div class="invalid-feedback"> Please filll out this field. </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label> <input id="check_1" name="check_1" type="checkbox" required> <small> I read and agree to Terms & Conditions </small> </input>
+                                <div class="Invalid-feedback"></div>
+
+                            </label>
+                        </div>
+
+                            <input type="submit" class="butt" value="SUBMIT">
+                        
+                    </form>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="myrightctn">
+                    <div class="box">
+                        <header> HELLO! </header>
+                        <p> We as a team have tried to bring one solution for all your health related worries. Register yourself soon and become a part of our MED Elixir family.  </p>
+                        <input type="button" class="butt_out" value="Learn More">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,233 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+
+
+.container-sm {
+    padding:150px;
+    position:absolute;
+    max-width:800px;
+    height:500px;
+    margin:auto;
+    top:40%;
+    left:50%;
+    transform:translate(-50%, -50%);
+}
+ 
+
+
+.myrightctn{
+    position:relative;
+    background: rgb(7, 178, 190);
+    border-radius:25px;
+    height:100%;
+    padding:35px;
+    color:darkslategray;
+    font-size:12px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+
+
+.myleftctn{
+    position:relative;
+    background:white;
+    border-radius:25px;
+    height:100%;
+    padding:25px;
+    padding-left:50px;
+}
+
+.myleftctn header{
+    font-size:24px;
+    font-weight:700;
+    margin-bottom:20px;
+}
+
+.row{
+    height:100%;
+}
+
+
+.mycard{
+    position:relative;
+    background:white;
+    height:220%;
+    border-radius:25px;
+    -webkit-box-shadow: 0px 10px 40px -10px rgba(0, 0, 0, 0.7);
+    -moz-box-shadow: 0px 10px 40px -10px rgba(0, 0, 0, 0.7);
+    box-shadow: 0px 10px 40px -10px rgba(0, 0, 0, 0.7);
+
+}
+
+.myrightctn header{
+    color:black;
+    font-size:44px;
+}
+
+.box{
+    position: relative;
+    margin:20px;
+    margin-bottom:100px;
+}
+
+
+
+.myleftctn .myinput{
+    width:230px;
+    border-radius:25px;
+    padding:10px;
+    padding-left:50px;
+    border:none;
+    -webkit-box-shadow: 0px 10px 49px -14px rgba(0, 0, 0, 0.7);
+    -moz-box-shadow: 0px 10px 49px -14px rgba(0, 0, 0, 0.7);
+    box-shadow: 0px 10px 49px -14px rgba(0, 0, 0, 0.7);
+}
+
+.myform{
+    position:relative;
+    margin-top: 50px;
+}
+
+
+
+.myleftctn .butt{
+    background: rgb(37, 37, 37);
+    color:rgb(252, 164, 0);
+    border:none;
+    border-radius:25px;
+    padding:10px;
+    -webkit-box-shadow: 0px 10px 41px -11px rgba(0, 0, 0, 0.7);
+    -moz-box-shadow: 0px 10px 41px -11px rgba(0, 0, 0, 0.7);
+    box-shadow: 0px 10px 41px -11px rgba(0, 0, 0, 0.7);
+}
+
+.myleftctn .butt:hover{
+    background: lightgray;
+}
+
+
+.myleftctn .fas{
+    position:relative;
+    color: teal;
+    left: 36px;
+}
+
+.myleftctn .fa{
+    position:relative;
+    color: teal;
+    left: 36px;
+}
+
+
+.butt_out{
+    background:transparent;
+    color:white;
+    width:120px;
+    border:2px solid white;
+    border-radius:25px;
+    padding:10px;
+    -webkit-box-shadow: 0px 10px 49px -14px rgba(0, 0, 0, 0.7);
+    -moz-box-shadow: 0px 10px 49px -14px rgba(0, 0, 0, 0.7);
+    box-shadow: 0px 10px 49px -14px rgba(0, 0, 0, 0.7);
+
+}
+
+.butt_out:hover{
+    background:white;
+}
+
+
+@media(min-width:992px){
+
+}
+
+@media(min-width:768px) and (max-width:1024px){
+
+}
+
+@media(min-width:575px) and (max-width:574px){
+
+}
+
+@media(min-width:480px) and (max-width:574px){
+    .container-sm {
+        top:25%;
+    }
+
+}
+
+@media(min-width:310px) and (max-width:480px){
+    .container-sm {
+        top:25%;
+    }
+    .myrightctn{
+        position:relative;
+        background: rgb(7, 178, 190);
+        border-radius:25px;
+        height:100%;
+        padding:35px;
+        color:darkslategray;
+        font-size:8px;
+    
+        display:flex;
+        justify-content:center;
+        align-items:center;
+    }
+    .myleftctn .myinput{
+        width:190px;
+        border-radius:25px;
+        padding:10px;
+        padding-left:50px;
+        border:none;
+        -webkit-box-shadow: 0px 10px 49px -14px rgba(0, 0, 0, 0.7);
+        -moz-box-shadow: 0px 10px 49px -14px rgba(0, 0, 0, 0.7);
+        box-shadow: 0px 10px 49px -14px rgba(0, 0, 0, 0.7);
+    }
+    
+}
+
+@media(min-width:200px) and (max-width:300px){
+    .myrightctn{
+        position:relative;
+        background: rgb(7, 178, 190);
+        border-radius:25px;
+        height:100%;
+        padding:35px;
+        color:darkslategray;
+        font-size:8px;
+    
+        display:flex;
+        justify-content:center;
+        align-items:center;
+    }
+    .myleftctn .myinput{
+        width:190px;
+        border-radius:25px;
+        padding:10px;
+        padding-left:50px;
+        border:none;
+        -webkit-box-shadow: 0px 10px 49px -14px rgba(0, 0, 0, 0.7);
+        -moz-box-shadow: 0px 10px 49px -14px rgba(0, 0, 0, 0.7);
+        box-shadow: 0px 10px 49px -14px rgba(0, 0, 0, 0.7);
+    }
+    .myleftctn .fas{
+        position:relative;
+        color: teal;
+        left: px;
+    }
+    
+    .myleftctn .fa{
+        position:relative;
+        color: teal;
+        left: 36px;
+    }
+    
+
+}

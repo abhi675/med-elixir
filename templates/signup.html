@@ -1,0 +1,219 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> med elixir </title>
+            <link rel="stylesheet" type="text/css" href="{% static 'css/signup.css' %}">
+
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+
+        </head>
+
+        
+    <body>
+        
+        <!-----------...........firstnavbar...........------------->
+
+        <div class="bgimg">
+
+            <nav class="navbar fixed-top navbar-expand-md bg-dark navbar-dark">
+
+                <div class="container">
+                    <a href="{% url 'index' %}" class="navbar-brand text-info font-weight-bold">
+                        MED Elixir
+                    </a>
+
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsenavbar">
+                        <span class="navbar-toggler-icon"> </span>
+                    </button>
+
+                    <div class="collapse navbar-collapse" text-center id="collapsenavbar">
+
+                        <ul class="navbar-nav nav-pills ml-auto">
+                            <li class="nav-item">
+                                <a href="{% url 'signup' %}" class="nav-link active bg-secondary text-white ml-2 mr-2"> Sign Up </a>
+                            </li>
+                            
+                            <li class="nav-item">
+                                <a href="{% url 'login' %}" class="nav-link text-white ml-2 mr-2"> Log In </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="" class="nav-link"> <i class="fas fa-user-circle fa-2x ml-2 mr-2"></i> </a>
+                            </li>
+                            
+                        </ul>
+                            
+                    </div>
+                </div>
+            </nav>
+        
+
+           
+        </div>
+      
+        <!-------------.............sign..up.......------------>
+        
+        <div class="container-sm ">
+            {% for message in messages %}
+            <div class="alert alert-primary d-flex align-items-center" role="alert">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-exclamation-triangle-fill flex-shrink-0 me-2" viewBox="0 0 16 16" role="img" aria-label="Warning:">
+                  <path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+                </svg>
+                <div>
+                  {{message}}
+                </div>
+              </div>
+              {% endfor %}
+            <div class="mycard">
+                <div class="row">
+                    <div class="col-md-6">
+                    <div class="myleftctn">
+
+                    <form action="" method='post' class="myform text-center">
+                        {% csrf_token %}
+                        <header class="text-warning font-weight-bold"> REGISTER </header>
+
+                        <div class="form-group">
+                            <i class="fas fa-user-clock"></i>
+                            <input class="my-input" type="text" name='name' placeholder="Name" id="name" required>
+                            <div class="invalid-feedback"> This field is important. </div>
+                        </div>
+
+                        <div class="form-group">
+                            <i class="fa fa-envelope" aria-hidden="true"></i>
+                            <input class="my-input" type="text" name='email' placeholder="Email" id="email" required>
+                            <div class="invalid-feedback"> This field is important. </div>
+                        </div>
+
+                        <div class="form-group">
+                            <i class="fa fa-mobile" aria-hidden="true"></i>
+                            <input class="my-input" type="number" name='number' placeholder="Mobile Number" id="number" required>
+                            <div class="invalid-feedback"> This field is important. </div>
+                        </div>
+
+                        <div class="form-group">
+                            <i class="fa fa-address-book" aria-hidden="true"></i>
+                            <input class="my-input" type="text" name='address' placeholder="Address" id="address" required>
+                            <div class="invalid-feedback"> This field is important. </div>
+                        </div>
+
+                        <div class="form-group">
+                            <i class="fas fa-city "></i>
+                            <input class="my-input" type="text" name='city' placeholder="City" id="city" required>
+                            <div class="invalid-feedback"> This field is important. </div>
+                        </div>
+
+                        <div class="form-group">
+                            <i class="fas fa-circle"></i>
+                            <select class="my-input" name='state' placeholder="State" id="state" required>
+                                <option> - - State - - </option>
+                                <option> Andhra Pradesh </option>
+                                <option> Arunachal Pradesh </option>
+                                <option> Assam </option>
+                                <option> Bihar </option>
+                                <option> Chattisgarh </option>
+                                <option> Goa </option>
+                                <option> Gujarat </option>
+                                <option> Haryana </option>
+                                <option> Himachal Pradesh </option>
+                                <option> Jharkhand </option>
+                                <option> Karnataka </option>
+                                <option> Kerala </option>
+                                <option> Madhya Pradesh </option>
+                                <option> Maharshtra </option>
+                                <option> Odisha </option>
+                                <option> Punjab </option>
+                                <option> Rajasthan </option>
+                                </select>
+
+                            <div class="invalid-feedback"> This field is important. </div>
+                            </div>
+
+                        <div class="form-group">
+                            <i class="fa fa-lock" aria-hidden="true"></i>
+                            <input class="my-input" type="password" name='password1' placeholder=" Create Password" id="pwd" required>
+                            <div class="invalid-feedback"> This field is important. </div>
+                        </div>
+
+                        <div class="form-group">
+                            <i class="fa fa-lock" aria-hidden="true"></i>
+                            <input class="my-input" type="password" name='password2' placeholder="Re-enter Password" id="pwd2" required>
+                            <div class="invalid-feedback"> This field is important. </div>
+                        </div>
+
+                        <div class="form-group">
+                            <i class="fas fa-calendar-plus    "></i>
+                            <input class="my-input datepicker" id="datepicker" name="date" placeholder="MM/DD/YYYY" type="date"/>
+                        </div>
+
+<!----------------.........javascrpt........-->
+                        <script>
+                            $(document).ready(function(){
+                                var date_input=$('input[name="date"]');
+                                var container=$('.bootstrap-iso form');
+                                var options={
+                                    format: 'mm/dd/yyyy',
+                                    container: container,
+                                    todayHighlight: true,
+                                    autoclose: true,
+                                };
+                                date_input.datepicker(options);
+                            })
+                        </script>
+<!-----------------------....................----------->
+
+                        <div class="form-group">
+                            <label class="control-label" for="radio"> Gender </label>
+                            <label class="radio-inline">
+                                <input type="radio" name="optradio"> Female
+                            </label>
+
+                            <label class="radio-inline">
+                                <input type="radio" name="optradio"> Male
+                            </label>
+                            
+                            <div class="invalid-feedback"> This field is important. </div>
+                        </div>
+
+                        <input type="submit" class="butt" value="Sign Up">
+
+                    </form>
+
+                </div>
+                </div>
+
+                        <div class="col-md-6">
+                            <div class="myrightctn" style=' background-image: url("static/images/image9.jpg");'>
+                                <div class="box">
+        
+                                    <input type="button" class="butt_out" value="Learn More">
+
+                                </div>
+                            </div>
+                        </div>
+
+
+                        
+
+                    
+                </div>
+            </div>
+        </div>
+    </body>
+    </html>
